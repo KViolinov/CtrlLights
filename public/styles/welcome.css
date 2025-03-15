@@ -70,7 +70,7 @@ p {
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
   transform: scale(1.1);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }

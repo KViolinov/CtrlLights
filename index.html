@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Management</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+    </header>
+
+    <main class="container">
+        <div class="layout"> 
+            <div class="left-column">
+                <section class="dashboard-section">
+                    <h2>Traffic Light Controls</h2>
+                    <div class="control-panel">
+                        <div class="control-group">
+                            <label for="green-light-frequency">Green Light Frequency (seconds):</label>
+                            <input type="range" id="green-light-frequency" min="10" max="60" value="30">
+                            <span id="frequency-value">30</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="traffic-tier">Traffic Tier:</label>
+                            <select id="traffic-tier">
+                                <option value="low">Low Traffic</option>
+                                <option value="medium">Medium Traffic</option>
+                                <option value="high">High Traffic</option>
+                            </select>
+                        </div>
+                        <button id="apply-settings">Apply</button>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Green Wave Control</h2>
+                    <div class="control-panel">
+                        <div class="control-group">
+                            <label for="green-wave-delay">Green Wave Delay (seconds):</label>
+                            <input type="range" id="green-wave-delay" min="0" max="30" value="10">
+                            <span id="wave-delay-value">10</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="green-wave-direction">Wave Direction:</label>
+                            <select id="green-wave-direction">
+                                <option value="north-south">North-South</option>
+                                <option value="east-west">East-West</option>
+                            </select>
+                        </div>
+                        <button id="apply-wave-settings">Apply</button>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Traffic Light Status</h2>
+                    <div class="data-grid">
+                        <div class="data-card">
+                            <h3>Intersection A</h3>
+                            <p>Status: <span id="traffic-status-a" class="status">Loading...</span></p>
+                        </div>
+                        <div class="data-card">
+                            <h3>Intersection B</h3>
+                            <p>Status: <span id="traffic-status-b" class="status">Loading...</span></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="dashboard-section">
+                    <h2>Live Traffic Camera Feed</h2>
+                    <div class="live-feed">
+                        <iframe src="https://www.webcamtaxi.com/en/south-korea/seoul/daerim-station-cam.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CTRLights</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

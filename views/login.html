@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form class="form" onsubmit="handleLogin(event)">
+      <div class="flex-column">
+        <label>Username </label>
+      </div>
+      <div class="inputForm">
+        <input
+          type="text"
+          id="username"
+          class="input"
+          placeholder="Enter your username"
+          required
+        />
+      </div>
+
+      <div class="flex-column">
+        <label>User Key </label>
+      </div>
+      <div class="inputForm">
+        <input
+          type="password"
+          id="password"
+          class="input"
+          placeholder="Enter your user key"
+          required
+        />
+      </div>
+
+      <div class="flex-row">
+        <div>
+          <input type="checkbox" id="rememberMe" />
+          <label for="rememberMe">Remember me</label>
+        </div>
+      </div>
+      <button type="submit" class="button-submit">Sign In</button>
+    </form>
+
+    <script>
+      function handleLogin(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+        window.location.href = "index.html"; // Redirect to index.html
+      }
+    </script>
+  </body>
+</html>

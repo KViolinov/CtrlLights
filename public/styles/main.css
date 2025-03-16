@@ -20,20 +20,32 @@ body {
 
 header {
     background-color: #2c3e50;
-    color: #fff;
-    padding: 40px 0;
+    color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 3rem;
+    flex-grow: 1;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
 
 header p {
     margin: 10px 0 20px;
     font-size: 1.5rem;
-    color: #ecf0f1;
+    color: #f9f9f9;
 }
 
 .layout {
@@ -47,7 +59,7 @@ header p {
 }
 
 .control-panel {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -97,7 +109,7 @@ header p {
 }
 
 .data-card {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 2rem;
     border: 2px solid rgba(219, 234, 254, 1);
     border-radius: 16px;
@@ -125,7 +137,6 @@ header p {
     color: #dc3545;
 }
 
-/* Traffic light classes with consistent animation frequencies */
 @keyframes blink-light {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
@@ -138,12 +149,12 @@ header p {
 
 .status.yellow {
     color: #ffc107;
-    animation: blink-light 2s infinite; /* Same frequency as green */
+    animation: blink-light 2s infinite;
 }
 
 .status.red {
     color: #dc3545;
-    animation: blink-light 2s infinite; /* Same frequency as green */
+    animation: blink-light 2s infinite;
 }
 
 .traffic-light-monitor {
@@ -152,7 +163,7 @@ header p {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border-radius: 16px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     padding: 20px;
@@ -180,14 +191,14 @@ header p {
 }
 
 .arrow:hover {
-    color: #0056b3;
-    background-color: #f0f8ff;
+    color: #007bff;
+    background-color: #f9f9f9;
     border-radius: 50%;
 }
 
 footer {
     background-color: #2c3e50;
-    color: #fff;
+    color: #f9f9f9;
     text-align: left;
     margin-top: auto;
 }
@@ -266,13 +277,11 @@ footer p {
         margin-bottom: 15px;
         order: 1;
     }
-   
-    /* Hide regular arrows */
+
     .traffic-light-monitor > .arrow {
         display: none;
     }
     
-    /* Show arrow container */
     .arrow-container {
         display: flex;
         justify-content: center;
@@ -281,7 +290,6 @@ footer p {
         margin-top: 10px;
     }
     
-    /* Style arrows inside container */
     .arrow-container .arrow {
         display: flex;
         margin: 0 15px;
@@ -369,7 +377,7 @@ footer p {
     .arrow-container .arrow {
         padding: 10px;
         margin: 0 20px;
-        background-color: #f0f0f0;
+        background-color: #f9f9f9;
         border-radius: 50%;
     }
 }

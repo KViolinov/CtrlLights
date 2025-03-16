@@ -4,14 +4,14 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   padding: 30px;
   width: 300px;
   border-radius: 20px;
@@ -20,7 +20,7 @@ body {
 }
 
 .inputForm {
-  border: 1.5px solid #ecedec;
+  border: 1.5px solid #f9f9f9;
   border-radius: 10px;
   height: 50px;
   display: flex;
@@ -42,7 +42,7 @@ body {
 }
 
 .inputForm:focus-within {
-  border-color: #2d79f3;
+  border-color: #007bff;
 }
 
 .flex-column > label {
@@ -60,7 +60,7 @@ body {
   margin-top: 20px;
   background-color: #151717;
   border: none;
-  color: white;
+  color: #f9f9f9;
   font-size: 15px;
   font-weight: 500;
   border-radius: 10px;

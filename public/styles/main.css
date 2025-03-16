@@ -38,9 +38,7 @@ header h2 {
     margin: 0;
     font-size: 3rem;
     flex-grow: 1;
-    text-align: center;
 }
-
 
 header p {
     margin: 10px 0 20px;
@@ -48,6 +46,7 @@ header p {
     color: #f9f9f9;
 }
 
+/* Layout */
 .layout {
     display: flex;
     flex-wrap: wrap;
@@ -59,7 +58,7 @@ header p {
 }
 
 .control-panel {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -95,6 +94,25 @@ header p {
     text-align: center;
 }
 
+/* Apply Button */
+.apply-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard Sections */
 .dashboard-section {
     margin: 40px 0;
 }
@@ -108,8 +126,9 @@ header p {
     text-align: center;
 }
 
+/* Data Card */
 .data-card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 2rem;
     border: 2px solid rgba(219, 234, 254, 1);
     border-radius: 16px;
@@ -124,6 +143,7 @@ header p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Status Indicators */
 .status {
     font-weight: bold;
     font-size: 1.4rem;
@@ -157,13 +177,14 @@ header p {
     animation: blink-light 2s infinite;
 }
 
+/* Traffic Light Monitor */
 .traffic-light-monitor {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     padding: 20px;
@@ -179,6 +200,7 @@ header p {
     box-shadow: none;
 }
 
+/* Navigation Arrows */
 .arrow {
     cursor: pointer;
     color: #007bff;
@@ -191,11 +213,12 @@ header p {
 }
 
 .arrow:hover {
-    color: #007bff;
+    color: #0056b3;
     background-color: #f9f9f9;
     border-radius: 50%;
 }
 
+/* Footer */
 footer {
     background-color: #2c3e50;
     color: #f9f9f9;
@@ -208,19 +231,20 @@ footer p {
     font-size: 1.2rem;
 }
 
+/* Responsive Design */
 @media (max-width: 1200px) {
     .container {
         padding: 15px;
     }
-    
+
     header {
         padding: 30px 0;
     }
-    
+
     header h1 {
         font-size: 2.2rem;
     }
-    
+
     header p {
         font-size: 1.3rem;
     }
@@ -230,15 +254,15 @@ footer p {
     .layout {
         gap: 20px;
     }
-   
+
     .control-panel {
         padding: 20px;
     }
-   
+
     .control-group label {
         font-size: 1.2rem;
     }
-   
+
     .control-group input[type="number"] {
         font-size: 1.2rem;
     }
@@ -248,30 +272,30 @@ footer p {
     .layout {
         flex-direction: column;
     }
-   
+
     .left-column, .middle-column, .right-column {
         flex: 1 1 100%;
         width: 100%;
     }
-   
+
     .dashboard-section h2 {
         font-size: 1.8rem;
     }
-   
+
     .control-group input[type="range"] {
         width: 100%;
     }
-   
+
     .control-group input[type="number"] {
         width: 80%;
     }
-   
+
     .traffic-light-monitor {
         flex-direction: column;
         align-items: center;
         padding: 15px;
     }
-   
+
     .traffic-light-card {
         width: 100%;
         margin-bottom: 15px;
@@ -281,7 +305,7 @@ footer p {
     .traffic-light-monitor > .arrow {
         display: none;
     }
-    
+
     .arrow-container {
         display: flex;
         justify-content: center;
@@ -289,7 +313,7 @@ footer p {
         order: 2;
         margin-top: 10px;
     }
-    
+
     .arrow-container .arrow {
         display: flex;
         margin: 0 15px;
@@ -300,37 +324,37 @@ footer p {
     .container {
         padding: 10px;
     }
-   
+
     .dashboard-section {
         margin: 30px 0;
     }
-   
+
     .control-panel, .data-card {
         padding: 15px;
     }
-   
+
     .traffic-light-monitor {
         padding: 15px;
     }
-   
+
     .control-group {
         margin-bottom: 15px;
     }
-   
+
     .control-group label {
         font-size: 1rem;
     }
-   
+
     .control-group input[type="number"] {
         width: 90%;
         font-size: 1rem;
         padding: 8px;
     }
-   
+
     .arrow {
         font-size: 24px;
     }
-   
+
     .arrow svg {
         width: 24px;
         height: 24px;
@@ -342,38 +366,38 @@ footer p {
         font-size: 1.5rem;
         padding: 0 10px;
     }
-   
+
     header p {
         font-size: 1rem;
         padding: 0 10px;
     }
-   
+
     .control-panel {
         padding: 12px;
     }
-   
+
     .data-card {
         padding: 1.2rem;
     }
-   
+
     .status {
         font-size: 1.1rem;
     }
-   
+
     .dashboard-section h2 {
         font-size: 1.5rem;
         margin-bottom: 15px;
     }
-   
+
     h3 {
         font-size: 1.2rem;
     }
-   
+
     .traffic-light-monitor {
         gap: 10px;
         padding: 12px;
     }
-    
+
     .arrow-container .arrow {
         padding: 10px;
         margin: 0 20px;
@@ -386,21 +410,21 @@ footer p {
     .control-group input[type="number"] {
         width: 100%;
     }
-   
+
     .traffic-light-card {
         padding: 10px;
     }
-   
+
     .traffic-light-card p {
         font-size: 0.9rem;
         margin: 8px 0;
     }
-   
+
     .arrow svg {
         width: 20px;
         height: 20px;
     }
-    
+
     .arrow-container .arrow {
         padding: 8px;
         margin: 0 15px;

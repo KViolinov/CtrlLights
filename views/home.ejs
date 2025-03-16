@@ -11,10 +11,10 @@
                         <input type="range" id="green-wave-delay" min="0" max="30" value="10">
                         <input type="number" id="wave-delay-input" min="0" max="30" value="10">
                     </div>
+                    <button class="apply-button" id="apply-green-wave">Apply</button>
                 </div>
             </section>
         </div>
-        
         <div class="middle-column">
             <section class="dashboard-section">
                 <h2>Air Quality Sensor</h2>
@@ -28,29 +28,24 @@
                 <h2>Traffic Light Monitor</h2>
                 <div class="traffic-light-monitor">
                     <div class="arrow" id="prev-light">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                            class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                            <path
-                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
                         </svg>
                     </div>
                     <div class="traffic-light-card">
-                        <h3>Intersection <span id="current-light">1</span></h3>
-                        <p>Status: <span id="traffic-status" class="status">Loading...</span></p>
-                        <p>Wave Direction: <span id="wave-direction">-</span></p>
-                        <p>Delay: <span id="wave-delay">-</span> seconds</p>
+                        <h3>Intersection <span id="current-light">1</span> of 8</h3>
+                        <p>Status: <span id="traffic-status" class="status"><%= trafficLights[0].lightStatus %></span></p>
+                        <p>Wave Direction: <span id="wave-direction"><%= trafficLights[0].lane || "-" %></span></p>
+                        <p>Delay: <span id="wave-delay"><%= trafficLights[0].timespan || "-" %></span> seconds</p>
                     </div>
                     <div class="arrow" id="next-light">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                            <path
-                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                         </svg>
                     </div>
                 </div>
             </section>
         </div>
-        
         <div class="right-column">
             <section class="dashboard-section">
                 <h2>Traffic Light Controls</h2>
@@ -60,18 +55,12 @@
                         <input type="range" id="green-light-frequency" min="10" max="60" value="30">
                         <input type="number" id="green-frequency-input" min="10" max="60" value="30">
                     </div>
-                    
-                    <div class="control-group">
-                        <label for="yellow-light-frequency">Yellow Light Frequency (seconds):</label>
-                        <input type="range" id="yellow-light-frequency" min="5" max="30" value="30">
-                        <input type="number" id="yellow-frequency-input" min="5" max="30" value="30">
-                    </div>
-
                     <div class="control-group">
                         <label for="red-light-frequency">Red Light Frequency (seconds):</label>
                         <input type="range" id="red-light-frequency" min="10" max="60" value="30">
                         <input type="number" id="red-frequency-input" min="10" max="60" value="30">
                     </div>
+                    <button class="apply-button" id="apply-traffic-controls">Apply</button>
                 </div>
             </section>
         </div>

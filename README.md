@@ -1,7 +1,7 @@
-# CtrLight – Intelligent Traffic Management System
+# CtrlLight – Intelligent Traffic Management System
 
 ## 📌 Description
-CtrLight is an AI-powered solution for adaptive traffic light control, designed to reduce congestion, minimize emissions, and shorten travel times. By integrating cameras, sensors, and machine learning algorithms, it analyzes real-time traffic data to dynamically optimize traffic signals and ensure smoother road conditions.
+CtrlLight is an AI-powered solution for adaptive traffic light control, designed to reduce congestion, minimize emissions, and shorten travel times. By integrating cameras, sensors, and machine learning algorithms, it analyzes real-time traffic data to dynamically optimize traffic signals and ensure smoother road conditions.
 
 ## 🎯 Goals
 1. **Reduce Traffic Congestion** – Automatically adjust traffic lights based on live traffic flow.  

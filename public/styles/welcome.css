@@ -33,7 +33,7 @@ main::before {
 }
 
 .content {
-  color: white;
+  color: #f9f9f9;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
   z-index: 1;
   position: relative;
@@ -58,7 +58,7 @@ p {
 
 .button {
   background-color: #007bff;
-  color: white;
+  color: #f9f9f9;
   padding: 15px 30px;
   font-size: 1.2rem;
   border: none;

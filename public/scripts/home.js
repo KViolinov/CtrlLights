@@ -22,3 +22,34 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(`Settings applied: Frequency = ${frequency}s, Tier = ${tier}`);
     });
 });
+
+async function fetchTrafficLights() {
+    const response = await fetch("/traffic-lights");
+    const data = await response.json();
+    
+    data.forEach(light => {
+        startCountdown(light.id, light.remaining_seconds, light.status);
+    });
+}
+
+function startCountdown(id, seconds, status) {
+    let timeLeft = seconds;
+
+    const interval = setInterval(async () => {
+        timeLeft--;
+
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            const response = await fetch("/traffic-lights/switch", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ id })
+            });
+
+            const newLight = await response.json();
+            startCountdown(newLight.id, newLight.remaining_seconds, newLight.status);
+        }
+
+        updateUI(id, timeLeft, status);
+    }, 1000);
+}

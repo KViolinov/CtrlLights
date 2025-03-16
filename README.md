@@ -46,4 +46,4 @@ Implementing **CtrLight** requires advanced knowledge of machine learning, compu
 CtrLight offers an innovative, data-driven approach to traffic management, cutting average wait times by up to 25% and reducing harmful emissions by over 20%. By leveraging real-time data and adaptive AI, the system paves the way for safer, more efficient, and eco-friendly roads. Future expansions include broader city-wide integration and enhanced analytics for ongoing improvements.
 
 ## 🏷️ License
-© 2025 **CtrLight**. All rights reserved
+© 2025 **CtrlLight**. All rights reserved

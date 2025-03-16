@@ -11,7 +11,7 @@
       <div class="content">
         <h1>CtrlLights</h1>
         <p>The solution to traffic control.</p>
-        <a href="login.ejs" class="button">Get Started</a>
+        <a href="/login" class="button">Get Started</a>
         <a class="button" style="margin-left: 10px" href="#info-sec"
           >How it works</a
         >
@@ -110,22 +110,6 @@
           </div>
         </div>
 
-        <script>
-          var acc = document.getElementsByClassName("accordion");
-
-          for (let i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              var panel = this.nextElementSibling;
-
-              if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-              } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-              }
-            });
-          }
-        </script>
       </div>
     </section>
     <section class="contributors-content">
@@ -182,5 +166,7 @@
         </div>
       </div>
     </section>
+
+    <script src="scripts/welcome.js"></script>
   </body>
 </html>

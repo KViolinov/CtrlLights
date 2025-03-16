@@ -144,7 +144,7 @@ main {
   align-items: center;
   height: 100vh;
   text-align: center;
-  background: url("/images/welcome-image.jpg") no-repeat center center
+  background: url("/public/images/welcome-image.jpg") no-repeat center center
     fixed;
   background-size: cover;
 }

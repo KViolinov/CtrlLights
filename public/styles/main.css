@@ -46,7 +46,6 @@ header p {
     color: #f9f9f9;
 }
 
-/* Layout */
 .layout {
     display: flex;
     flex-wrap: wrap;
@@ -58,7 +57,7 @@ header p {
 }
 
 .control-panel {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -87,17 +86,16 @@ header p {
     width: 100px;
     padding: 10px;
     border-radius: 8px;
-    border: 2px solid #ccc;
+    border: 2px solid #f9f9f9;
     font-size: 1.4rem;
     margin: 10px auto;
     display: block;
     text-align: center;
 }
 
-/* Apply Button */
 .apply-button {
     background-color: #007bff;
-    color: #fff;
+    color: #f9f9f9;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -109,10 +107,9 @@ header p {
 }
 
 .apply-button:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
 }
 
-/* Dashboard Sections */
 .dashboard-section {
     margin: 40px 0;
 }
@@ -126,9 +123,8 @@ header p {
     text-align: center;
 }
 
-/* Data Card */
 .data-card {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 2rem;
     border: 2px solid rgba(219, 234, 254, 1);
     border-radius: 16px;
@@ -143,7 +139,6 @@ header p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Status Indicators */
 .status {
     font-weight: bold;
     font-size: 1.4rem;
@@ -177,14 +172,13 @@ header p {
     animation: blink-light 2s infinite;
 }
 
-/* Traffic Light Monitor */
 .traffic-light-monitor {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border-radius: 16px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     padding: 20px;
@@ -200,11 +194,9 @@ header p {
     box-shadow: none;
 }
 
-/* Navigation Arrows */
 .arrow {
     cursor: pointer;
     color: #007bff;
-    font-size: 32px;
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
@@ -213,12 +205,11 @@ header p {
 }
 
 .arrow:hover {
-    color: #0056b3;
+    color: #007bff;
     background-color: #f9f9f9;
     border-radius: 50%;
 }
 
-/* Footer */
 footer {
     background-color: #2c3e50;
     color: #f9f9f9;
@@ -231,7 +222,6 @@ footer p {
     font-size: 1.2rem;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .container {
         padding: 15px;
@@ -302,10 +292,6 @@ footer p {
         order: 1;
     }
 
-    .traffic-light-monitor > .arrow {
-        display: none;
-    }
-
     .arrow-container {
         display: flex;
         justify-content: center;
@@ -317,6 +303,18 @@ footer p {
     .arrow-container .arrow {
         display: flex;
         margin: 0 15px;
+        cursor: pointer;
+        color: #007bff;
+        transition: color 0.3s ease;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .arrow-container .arrow:hover {
+        color: #007bff;
+        background-color: #f9f9f9;
+        border-radius: 50%;
     }
 }
 
@@ -335,6 +333,10 @@ footer p {
 
     .traffic-light-monitor {
         padding: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .control-group {
@@ -358,6 +360,43 @@ footer p {
     .arrow svg {
         width: 24px;
         height: 24px;
+    }
+
+    .arrow-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .arrow-container .arrow {
+        pointer-events: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+        color: #007bff;
+        transition: color 0.3s ease;
+        background-color: #f9f9f9;
+        border-radius: 50%;
+    }
+
+    .arrow-container .arrow:hover {
+        color: #0056b3;
+        background-color: #f9f9f9;
+    }
+
+    .arrow-container .arrow:first-child {
+        margin-left: 10px; /* Position the left arrow */
+    }
+
+    .arrow-container .arrow:last-child {
+        margin-right: 10px; /* Position the right arrow */
     }
 }
 

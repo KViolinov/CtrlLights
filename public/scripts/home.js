@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("red-frequency-input").value = currentLight.redFrequency;
     }
 
-    // Navigation Arrows
     document.getElementById("prev-light").addEventListener("click", () => {
         currentTrafficLight = currentTrafficLight > 1 ? currentTrafficLight - 1 : 8;
         updateTrafficLightDisplay();
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateTrafficLightDisplay();
     });
 
-    // Apply Traffic Light Controls
     document.getElementById("apply-traffic-controls").addEventListener("click", () => {
         const currentLight = trafficLights[currentTrafficLight - 1];
         currentLight.greenFrequency = parseInt(document.getElementById("green-light-frequency").value);

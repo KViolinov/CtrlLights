@@ -3,9 +3,6 @@ import UserController from "../controllers/authController.js";
 import passport from "../config/passport.js";
 
 const router = express.Router();
-
-router.get("/", UserController.getHomePage);
-
 router.get("/login", UserController.getLoginPage);
 router.post(
   "/login",

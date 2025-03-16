@@ -5,14 +5,6 @@ class UserController {
     res.render("login");
   }
 
-  static getHomePage(req, res) {
-    if (req.isAuthenticated()) {
-      res.render("home");
-    } else {
-      res.render("welcome");
-    }
-  }
-
   static logoutController(req, res) {
     req.logout(function (err) {
       if (err) {

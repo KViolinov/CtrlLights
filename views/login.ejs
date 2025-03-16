@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/styles/login.css" />
+    <link rel="stylesheet" href="styles/login.css" />
     <title>Login</title>
   </head>
   <body>
-    <form class="form" onsubmit="handleLogin(event)">
+    <form class="form" action="/login" method="POST">
       <div class="flex-column">
         <label>Username </label>
       </div>
@@ -24,7 +24,7 @@
             ></path>
           </g>
         </svg>
-        <input type="text" id="username" class="input" placeholder="Enter your username" required />
+        <input type="text" name="username" id="username" class="input" placeholder="Enter your username" required />
       </div>
 
       <div class="flex-column">
@@ -46,6 +46,7 @@
         </svg>
         <input
           type="password"
+          name="password"
           id="password"
           class="input"
           placeholder="Enter your user key"

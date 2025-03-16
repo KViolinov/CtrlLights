@@ -9,7 +9,8 @@ class AirQuality {
 
     static async getAll() {
         const response = await axios.get(`${process.env.API_BASE_URL}/getAirQualities`);
-        return response.airQualityList.map((airQuality) => new AirQuality(
+        const airQualities = Object.values(response.data.airQualityList);
+        return airQualities.map((airQuality) => new AirQuality(
             airQuality.id,
             airQuality.date,
             airQuality.amount,

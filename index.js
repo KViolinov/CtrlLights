@@ -4,8 +4,7 @@ import path from "path";
 import dotenv from "dotenv";
 import passport from "./config/passport.js";
 import authRoutes from "./routes/authRoutes.js";
-import trafficLightsRoutes from "./routes/trafficLightRoutes.js";
-import airQualitiesRoutes from "./routes/airQualityRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -43,15 +42,9 @@ app.use((req, res, next) => {
     next();
 });
 
-function isAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) return next();
-    res.redirect("/login");
-}
-
 // Routes
 app.use("/", authRoutes);
-app.use("/", trafficLightsRoutes);
-app.use("/", airQualitiesRoutes);
+app.use("/", dashboardRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

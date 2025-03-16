@@ -1,5 +1,4 @@
 import axios from "axios";
-import db from "../config/db.js";
 
 class TrafficLight {
     constructor(id, name, freeLaneStatus, timespan, lane, lightStatus) {
@@ -13,12 +12,12 @@ class TrafficLight {
 
     static async getAll() {
         const response = await axios.get(`${process.env.API_BASE_URL}/getTrafficLights`);
-        console.log(response);
-        return response.trafficLightsList.map((light) => new TrafficLight(
+        const lights = Object.values(response.data.trafficLightsList);
+        return lights.map((light) => new TrafficLight(
             light.id,
             light.name,
             light.freeLaneStatus,
-            light.timespan,
+            light.timeSpan,
             light.lane,
             light.lightStatus,
         ));

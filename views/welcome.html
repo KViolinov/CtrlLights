@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles/welcome.css" />
+    <title>CtrlLights</title>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <h1>CtrlLights</h1>
+        <p>The solution to traffic control.</p>
+        <a href="login.ejs" class="button">Get Started</a>
+        <a class="button" style="margin-left: 10px" href="#info-sec"
+          >How it works</a
+        >
+      </div>
+    </main>
+    <section id="info-sec" class="info-cards">
+      <div class="container">
+        <div class="card_box">
+          <h2>Smart Traffic Control</h2>
+          <p>
+            Optimizing traffic flow with intelligent algorithms to reduce
+            congestion and improve efficiency.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card_box">
+          <h2>Advanced Traffic Light Management</h2>
+          <p>
+            A full-stack solution that dynamically adjusts traffic light timing
+            to optimize road usage.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card_box">
+          <h2>Real-Time Traffic Optimization</h2>
+          <p>
+            Uses smart algorithms to analyze traffic conditions and make instant
+            adjustments.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card_box">
+          <h2>Reducing Congestion, Improving Commutes</h2>
+          <p>
+            Enhancing urban mobility by minimizing wait times and streamlining
+            traffic control.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="FAQ">
+      <h2>Frequently Asked Questions</h2>
+      <div class="FAQ-content">
+        <div class="accordion-container">
+          <button class="accordion">What is CtrlLights?</button>
+          <div class="panel">
+            <p>
+              CtrlLights is a full-stack traffic control system designed to
+              optimize traffic light timings using advanced algorithms,
+              improving traffic flow and reducing congestion.
+            </p>
+          </div>
+
+          <button class="accordion">
+            How does CtrlLights optimize traffic flow?
+          </button>
+          <div class="panel">
+            <p>
+              It uses real-time data to analyze traffic conditions and adjusts
+              traffic light timings accordingly, helping to reduce delays and
+              improve commute times.
+            </p>
+          </div>
+
+          <button class="accordion">
+            Can CtrlLights be implemented in any city?
+          </button>
+          <div class="panel">
+            <p>
+              Yes, CtrlLights can be customized for any city's traffic
+              infrastructure. It is adaptable and scalable to suit different
+              traffic patterns and needs.
+            </p>
+          </div>
+          <button class="accordion">
+            What makes CtrlLights different from traditional traffic systems?
+          </button>
+          <div class="panel">
+            <p>
+              Unlike traditional static systems, CtrlLights dynamically adapts
+              to traffic conditions, ensuring a more efficient and responsive
+              approach to managing traffic.
+            </p>
+          </div>
+
+          <button class="accordion">How does CtrlLights improve safety?</button>
+          <div class="panel">
+            <p>
+              By optimizing traffic flow and reducing congestion, CtrlLights can
+              help reduce accidents caused by traffic jams or inefficient
+              traffic signal management.
+            </p>
+          </div>
+        </div>
+
+        <script>
+          var acc = document.getElementsByClassName("accordion");
+
+          for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              }
+            });
+          }
+        </script>
+      </div>
+    </section>
+    <section class="contributors-content">
+	<h1>Contributors</h1>
+      <div class="contributors">
+        <div class="card">
+          <img src="/public/images/Velislav.jpg" alt="Contributor 1" />
+          <div class="info">
+            <h3>Velislav Donchev</h3>
+            <p>Frontend</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/public/images/Ivan.jpg" alt="Contributor 2" />
+          <div class="info">
+            <h3>Ivan Georgiev</h3>
+            <p>Frontend</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/public/images/Mert.jpg" alt="Contributor 3" />
+          <div class="info">
+            <h3>Mert Elsenev</h3>
+            <p>Mobile</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/public/images/Atanas.PNG" alt="Contributor 4" />
+          <div class="info">
+            <h3>Atanas Chobanov</h3>
+            <p>Backend</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/public/images/Konstantin.jpg" alt="Contributor 5" />
+          <div class="info">
+            <h3>Konstantin Violinov</h3>
+            <p>Hardware</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/public/images/Kaloyan.jpg" alt="Contributor 6" />
+          <div class="info">
+            <h3>Kaloyan Nikolov</h3>
+            <p>Designer</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/public/images/Preslav.jpg" alt="Contributor 7" />
+          <div class="info">
+            <h3>Preslav Tsvetanov</h3>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

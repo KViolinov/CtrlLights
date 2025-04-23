@@ -1,0 +1,471 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 3rem;
+    flex-grow: 1;
+}
+
+header p {
+    margin: 10px 0 20px;
+    font-size: 1.5rem;
+    color: #f9f9f9;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.left-column, .middle-column, .right-column {
+    flex: 1 1 300px;
+}
+
+.control-panel {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+.control-group {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.control-group label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.control-group input[type="range"] {
+    width: 80%;
+    margin: 15px auto;
+    display: block;
+}
+
+.control-group input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #f9f9f9;
+    font-size: 1.4rem;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+.apply-button {
+    background-color: #007bff;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.apply-button:hover {
+    background-color: #007bff;
+}
+
+.dashboard-section {
+    margin: 40px 0;
+}
+
+.dashboard-section h2 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.data-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border: 2px solid rgba(219, 234, 254, 1);
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.status {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.status.good {
+    color: #28a745;
+}
+
+.status.bad {
+    color: #dc3545;
+}
+
+@keyframes blink-light {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.status.green {
+    color: #28a745;
+    animation: blink-light 2s infinite;
+}
+
+.status.yellow {
+    color: #ffc107;
+    animation: blink-light 2s infinite;
+}
+
+.status.red {
+    color: #dc3545;
+    animation: blink-light 2s infinite;
+}
+
+.traffic-light-monitor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.traffic-light-card {
+    flex: 1 1 200px;
+    background-color: transparent;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    box-shadow: none;
+}
+
+.arrow {
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.arrow:hover {
+    color: #007bff;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #f9f9f9;
+    text-align: left;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .layout {
+        gap: 20px;
+    }
+
+    .control-panel {
+        padding: 20px;
+    }
+
+    .control-group label {
+        font-size: 1.2rem;
+    }
+
+    .control-group input[type="number"] {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .left-column, .middle-column, .right-column {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .dashboard-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .control-group input[type="range"] {
+        width: 100%;
+    }
+
+    .control-group input[type="number"] {
+        width: 80%;
+    }
+
+    .traffic-light-monitor {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .traffic-light-card {
+        width: 100%;
+        margin-bottom: 15px;
+        order: 1;
+    }
+
+    .arrow-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .arrow-container .arrow {
+        display: flex;
+        margin: 0 15px;
+        cursor: pointer;
+        color: #007bff;
+        transition: color 0.3s ease;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .arrow-container .arrow:hover {
+        color: #007bff;
+        background-color: #f9f9f9;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .dashboard-section {
+        margin: 30px 0;
+    }
+
+    .control-panel, .data-card {
+        padding: 15px;
+    }
+
+    .traffic-light-monitor {
+        padding: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .control-group {
+        margin-bottom: 15px;
+    }
+
+    .control-group label {
+        font-size: 1rem;
+    }
+
+    .control-group input[type="number"] {
+        width: 90%;
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .arrow {
+        font-size: 24px;
+    }
+
+    .arrow svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .arrow-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .arrow-container .arrow {
+        pointer-events: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+        color: #007bff;
+        transition: color 0.3s ease;
+        background-color: #f9f9f9;
+        border-radius: 50%;
+    }
+
+    .arrow-container .arrow:hover {
+        color: #0056b3;
+        background-color: #f9f9f9;
+    }
+
+    .arrow-container .arrow:first-child {
+        margin-left: 10px; /* Position the left arrow */
+    }
+
+    .arrow-container .arrow:last-child {
+        margin-right: 10px; /* Position the right arrow */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+
+    header p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .control-panel {
+        padding: 12px;
+    }
+
+    .data-card {
+        padding: 1.2rem;
+    }
+
+    .status {
+        font-size: 1.1rem;
+    }
+
+    .dashboard-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .traffic-light-monitor {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .arrow-container .arrow {
+        padding: 10px;
+        margin: 0 20px;
+        background-color: #f9f9f9;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 360px) {
+    .control-group input[type="number"] {
+        width: 100%;
+    }
+
+    .traffic-light-card {
+        padding: 10px;
+    }
+
+    .traffic-light-card p {
+        font-size: 0.9rem;
+        margin: 8px 0;
+    }
+
+    .arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .arrow-container .arrow {
+        padding: 8px;
+        margin: 0 15px;
+    }
+}

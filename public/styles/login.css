@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  width: 300px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputForm {
+  border: 1.5px solid #f9f9f9;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: border 0.2s ease-in-out;
+}
+
+.input {
+  margin-left: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border-color: #007bff;
+}
+
+.flex-column > label {
+  color: #151717;
+  font-weight: 600;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-submit {
+  margin-top: 20px;
+  background-color: #151717;
+  border: none;
+  color: #f9f9f9;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.button-submit:hover {
+  background-color: #252727;
+}
+
+::placeholder {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}

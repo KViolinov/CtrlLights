@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CtrlLights.MainPage"
+             BackgroundImageSource="welcomeimage.png">
+
+    <VerticalStackLayout x:Name="MainLayout" VerticalOptions="Fill" Spacing="20">
+        <!-- Top Frame (at the top) -->
+        <Frame Padding="5" Margin="0" BackgroundColor="#2c3e50" VerticalOptions="Start" HeightRequest="40" CornerRadius="0" BorderColor="#2c3e50">
+            <Label Text="CtrlLights" TextColor="White" HorizontalOptions="Center" FontFamily="Poppins-Medium" FontSize="21"/>
+        </Frame>
+
+
+        <Frame HeightRequest="635" Margin="15" CornerRadius="15">
+            <VerticalStackLayout Spacing="15">
+                <Label Text="Main crossroad" TextColor="Black" HorizontalOptions="Center" FontSize="17" FontAttributes="Bold" FontFamily="Poppins-Medium" Margin="0" Padding="0"/>
+                <Frame HeightRequest="270" Padding="0" VerticalOptions="Start" WidthRequest="290" BorderColor="Transparent" CornerRadius="25" BackgroundColor="Aqua" >
+                    <!-- AbsoluteLayout (filling the remaining space) -->
+                    <AbsoluteLayout VerticalOptions="FillAndExpand">
+                        <!-- Background Image -->
+                        <Image Source="hackintona.png"
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        Aspect="AspectFill"/>
+
+                        <!-- Foreground Image (smaller and centered) -->
+                        <Image x:Name="pngEight" Source="trafficlight.png" HeightRequest="80" WidthRequest="20" Rotation="90"
+                        AbsoluteLayout.LayoutBounds="0.12, 0.61, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                        <!--x:Name="StatusLeft"-->
+                        <Frame x:Name="StatusLeft"
+                        AbsoluteLayout.LayoutBounds="0.04, 0.565, 0.3, 0.3"  
+                        HeightRequest="5" 
+                        WidthRequest="5"
+                        CornerRadius="10"
+                        BorderColor="#2c3e50"
+                        BackgroundColor="LightGreen"
+                        Padding="0"
+                        Margin="0"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngSeven" Source="trafficlight.png" HeightRequest="80" WidthRequest="20" Rotation="90"
+                        AbsoluteLayout.LayoutBounds="0.12, 0.525, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngThree" Source="trafficlight.png" HeightRequest="80" WidthRequest="20" Rotation="-90"
+                        AbsoluteLayout.LayoutBounds="0.87, 0.445, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                        <!--dolu-->
+                        <Frame x:Name="StatusDown"
+                        AbsoluteLayout.LayoutBounds="0.5595, 0.945, 0.3, 0.3"  
+                        HeightRequest="5" 
+                        WidthRequest="5"
+                        CornerRadius="10"
+                        BorderColor="#2c3e50"
+                        BackgroundColor="LightGreen"
+                        Padding="0"
+                        Margin="0"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngFour" Source="trafficlight.png" HeightRequest="80" WidthRequest="20" Rotation="-90"
+                        AbsoluteLayout.LayoutBounds="0.87, 0.525, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngFive" Source="trafficlight.png" HeightRequest="80" WidthRequest="20"
+                        AbsoluteLayout.LayoutBounds="0.52, 0.85, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <!--desno-->
+                        <Frame x:Name="StatusRight"
+                        AbsoluteLayout.LayoutBounds="0.955, 0.495, 0.3, 0.3"  
+                        HeightRequest="5" 
+                        WidthRequest="5"
+                        CornerRadius="10"
+                        BorderColor="#2c3e50"
+                        BackgroundColor="LightGreen"
+                        Padding="0"
+                        Margin="0"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngSix" Source="trafficlight.png" HeightRequest="80" WidthRequest="20"
+                        AbsoluteLayout.LayoutBounds="0.595, 0.85, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngOne" Source="trafficlight.png" HeightRequest="80" WidthRequest="20" Rotation="180"
+                        AbsoluteLayout.LayoutBounds="0.4, 0.19, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <!--gore-->
+                        <Frame x:Name="StatusUp"
+                        AbsoluteLayout.LayoutBounds="0.44, 0.09, 0.3, 0.3"  
+                        HeightRequest="5" 
+                        WidthRequest="5"
+                        CornerRadius="10"
+                        BorderColor="#2c3e50"
+                        BackgroundColor="LightGreen"
+                        Padding="0"
+                        Margin="0"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Image x:Name="pngTwo" Source="trafficlight.png" HeightRequest="80" WidthRequest="20" Rotation="180"
+                        AbsoluteLayout.LayoutBounds="0.475, 0.19, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="1" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.38, 0.28, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="2" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.47, 0.28, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="3" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.77, 0.41, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="4" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.77, 0.505, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="5" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.52, 0.71, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="6" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.61, 0.71, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="7" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.23, 0.505, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                        <Label  HeightRequest="20" WidthRequest="20" Text="8" Background="#2c3e50" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium"
+                        AbsoluteLayout.LayoutBounds="0.23, 0.6, 0.3, 0.3"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+
+
+
+                    </AbsoluteLayout>
+                </Frame>
+
+
+
+                <Frame Margin="0" Padding="0" BorderColor="Transparent" HeightRequest="200" CornerRadius="15">
+                    <ScrollView HorizontalOptions="Center" VerticalOptions="FillAndExpand" BackgroundColor="#bcc8e1">
+                        <FlexLayout x:Name="ElementsLayout"
+                        Padding="5"
+                        Direction="Row"
+                        JustifyContent="Center"
+                        AlignItems="Center"
+                        Wrap="Wrap"
+                        AlignContent="Center">
+                        </FlexLayout>
+                    </ScrollView>
+                </Frame>
+
+
+                <HorizontalStackLayout Spacing="45" HorizontalOptions="Center">
+                    <Label x:Name="RefreshedDateLabel" Text="Last refreshed:" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Poppins-Medium" VerticalTextAlignment="Center"/>
+                    <ImageButton x:Name="infoBtn" Source="info.svg" BackgroundColor="Blue" Clicked="InfoBtn_Clicked" HeightRequest="50" WidthRequest="50" CornerRadius="10" Padding="100"/>
+                </HorizontalStackLayout>
+
+
+
+
+
+
+
+            </VerticalStackLayout>
+
+        </Frame>
+    </VerticalStackLayout>
+
+</ContentPage>
